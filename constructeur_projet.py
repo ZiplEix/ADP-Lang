@@ -7,6 +7,7 @@
 from genericpath import exists
 import shutil
 import os
+from tkinter import N
 
 from pip import main
 
@@ -38,7 +39,7 @@ fonction_de_base.write("version 1\n\nune fonction pour ecrire bonjour monde dans
 fonction_de_base.close()
 
 principal = open(nom_du_projet + "/principal.adp", "w")
-principal.write("version 1.0\nc'est le fichier ou commence le programme\n\nDEPART\n\nvar i = 0;\nfonction(bonjour_monde);\n\nSTOP(0)\n")
+principal.write("version 1.0\nc'est le fichier ou commence le programme\n\nDEPART\n\nvar i = 0;\nfonction(bonjour_monde);\nfonction(mon_affichage(\"bonjour monde\"));\n\nSTOP(0)\n")
 principal.close()
 
 print("Projet créé avec succès")
