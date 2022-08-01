@@ -8,11 +8,6 @@
 #ifndef STOCKAGE_H_
     #define STOCKAGE_H_
 
-    #include <stdio.h>
-    #include <stdlib.h>
-    #include <string.h>
-    #include <unistd.h>
-
     #define TYPE_INT 0
     #define TYPE_FLOAT 1
     #define TYPE_STRING 2
@@ -37,7 +32,7 @@ typedef struct variable_s {
 
 typedef struct loop_s {
     char *condition;
-    variable_s *var;
+    variables *var;
     struct loop_s *loop;
     struct loop_s *next;
 } loop;

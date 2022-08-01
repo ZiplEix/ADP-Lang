@@ -4,10 +4,16 @@
 ** File description:
 ** adp
 */
-#include "adp.h"
+#include "../include/adp.h"
+
+void init_constructeur(constructeur *c) {
+    char *str = open_file("test.txt");
+    printf("%s\n", str);
+}
 
 int adp(int argc, char **argv)
 {
-    printf("ADP-Lang\n");
+    constructeur *c = malloc(sizeof(constructeur));
+    init_constructeur(c);
     return 0;
 }
