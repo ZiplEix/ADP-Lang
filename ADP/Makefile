@@ -192,20 +192,26 @@ uninstall:
 	@echo "Removing $(DESTDIR)$(INSTALL_PREFIX)/bin/$(BIN_NAME)"
 	@$(RM) $(DESTDIR)$(INSTALL_PREFIX)/bin/$(BIN_NAME)
 
-# Removes all build files
-.PHONY: fclean
-fclean:
-	@echo "Deleting $(BIN_NAME) symlink"
-	@$(RM) $(BIN_NAME)
+.PHONY: clean
+clean:
 	@echo "Deleting directories"
 	@$(RM) -r build
+
+# Removes all build files
+.PHONY: fclean
+fclean: clean
 	@$(RM) -r bin
+	@echo "Deleting $(BIN_NAME) symlink"
+	@$(RM) $(BIN_NAME)
 
 # Main rule, checks the executable and symlinks to the output
 all: $(BIN_PATH)/$(BIN_NAME)
 	@echo "Making symlink: $(BIN_NAME) -> $<"
 	@$(RM) $(BIN_NAME)
 	@ln -s $(BIN_PATH)/$(BIN_NAME) $(BIN_NAME)
+
+re: fclean all
+	@echo "Re-building $(BIN_NAME)"
 
 # Link the executable
 $(BIN_PATH)/$(BIN_NAME): $(OBJECTS)
