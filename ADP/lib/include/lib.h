@@ -18,5 +18,6 @@
 
 int search_index_char(char *str, char c);
 char *open_file(char *file);
+char **split(char *str, char splitter);
 
 #endif /* !LIB_H_ */

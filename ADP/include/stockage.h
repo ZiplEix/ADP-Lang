@@ -14,9 +14,6 @@
     #define TYPE_BOOL 3
     #define TYPE_CHAR 4
 
-    #define TRUE 1
-    #define FALSE 0
-
 typedef struct contenue_s {
     char data;
     struct caractere_s *next;

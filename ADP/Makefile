@@ -196,6 +196,7 @@ uninstall:
 clean:
 	@echo "Deleting directories"
 	@$(RM) -r build
+	@$(RM) -r null.d
 
 # Removes all build files
 .PHONY: fclean
