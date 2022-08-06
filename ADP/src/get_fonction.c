@@ -8,7 +8,6 @@
 
 void get_all_fonction(constructeur *c)
 {
-    printf("OUI\n");
     DIR *d;
     struct dirent *dir;
     int nb_fonction = 0;

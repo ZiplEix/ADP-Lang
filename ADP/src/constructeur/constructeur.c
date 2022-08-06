@@ -14,11 +14,12 @@ void error_constructor_file(char *constructeur)
     }
 }
 
-int exec_constructeur(constructeur *c, char *constructeur, int argc)
+int exec_constructeur(constructeur *c, char *constructeur, int argc, fonctions *f)
 {
     error_constructor_file(constructeur);
     init_constructeur(c);
     char *construct = open_file(constructeur);
     set_constructeur(c, construct);
+    set_fonctions(f, construct);
     free(construct);
 }

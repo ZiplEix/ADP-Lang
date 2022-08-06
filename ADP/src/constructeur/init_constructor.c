@@ -16,7 +16,6 @@ void init_constructeur(constructeur *c)
     c->description = NULL;
 
     c->auto_fonction = TRUE;
-    c->fonction = NULL;
 
     c->precised_start = FALSE;
     c->start = "main.adp";

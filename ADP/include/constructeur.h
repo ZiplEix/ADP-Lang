@@ -22,7 +22,6 @@ typedef struct constructeur_s {
     char *description;
 
     int auto_fonction;
-    char **fonction;
 
     int precised_start;
     char *start;

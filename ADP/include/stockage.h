@@ -36,7 +36,7 @@ typedef struct loop_s {
 
 typedef struct fonction_s {
     char *name;
-    int fd;
+    // int fd;
     char *content;
     variables *var;
     loop *loop;
