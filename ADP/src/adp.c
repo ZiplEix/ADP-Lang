@@ -17,10 +17,6 @@ void free_constructeur(constructeur *c)
 int adp(int argc, char **argv)
 {
     constructeur *c = malloc(sizeof(constructeur));
-    if (argc <= 1) {
-        printf("error : no constructor precised\n");
-        exit(1);
-    }
     exec_constructeur(c, argv[1], argc);
     free(c->autorized_params);
     free(c);
