@@ -211,8 +211,9 @@ all: $(BIN_PATH)/$(BIN_NAME)
 	@$(RM) $(BIN_NAME)
 	@ln -s $(BIN_PATH)/$(BIN_NAME) $(BIN_NAME)
 
-re: fclean all
+re: fclean
 	@echo "Re-building $(BIN_NAME)"
+	@make
 
 # Link the executable
 $(BIN_PATH)/$(BIN_NAME): $(OBJECTS)
