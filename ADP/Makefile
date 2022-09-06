@@ -1,5 +1,5 @@
 ##
-## EPITECH PROJECT, 2022
+## PERSONAL PROJECT, 2022
 ## CMakeTests
 ## File description:
 ## Makefile
